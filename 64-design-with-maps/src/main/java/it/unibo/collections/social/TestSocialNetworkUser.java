@@ -89,6 +89,15 @@ public final class TestSocialNetworkUser {
         assertTrue(
                 "Denzel has STILL 2 followed people in group \"" + WRITERS + "\"",
                 dwashington.getFollowedUsersInGroup(WRITERS).size() == 2);
+
+        /*
+         * Adding another friend to Denzel's "colleagues" group that exists in an other
+         * group
+         */
+        dwashington.addFollowedUser("colleagues", asmith);
+        assertTrue(
+                "Denzel should have 4 followed people",
+                dwashington.getFollowedUsers().size() == 4);
     }
 
     private static void assertTrue(final String message, final boolean value) {
