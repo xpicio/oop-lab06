@@ -87,7 +87,9 @@ public final class UseListsAndMaps {
          * 4) Using a single for-each, print the contents of the arraylist.
          */
         System.out.print("ArrayList items: [ ");
-        al01.forEach(item -> System.out.print(item + " "));
+        for (Integer item : al01) {
+            System.out.print(item + " ");
+        }
         System.out.println("]");
 
         /*
