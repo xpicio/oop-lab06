@@ -56,7 +56,7 @@ public class GraphImpl<N> implements Graph<N> {
 
     @Override
     public Set<N> linkedNodes(N node) {
-        Set<N> linkedNodes = this.graph.get(node);
+        Set<N> linkedNodes = Collections.unmodifiableSet(this.graph.get(node));
 
         return linkedNodes == null ? Collections.emptySet() : linkedNodes;
     }
